@@ -14,6 +14,7 @@ main {
 }
 
 .main {
+    box-sizing: border-box;
     float: left;
     width: 70%;
     background-color: #fff;
@@ -21,8 +22,9 @@ main {
 }
 
 .sidebar {
+    box-sizing: border-box;
     float: left;
-    width: calc(30% - 3em);
+    width: 30%;
     padding: 1.5em;
     background-color: #fff;
     border-radius: .5em;
