@@ -1,0 +1,25 @@
+body {
+    background-color: #eee;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: 0.5em;
+}
+
+main {
+    display: block; /* fixes IE bug where main is rendered inline */
+}
+
+.main {
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+.sidebar {
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
