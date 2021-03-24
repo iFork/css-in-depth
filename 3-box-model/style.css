@@ -22,7 +22,7 @@ main {
 
 .sidebar {
     float: left;
-    width: 30%;
+    width: calc(30% - 3em);
     padding: 1.5em;
     background-color: #fff;
     border-radius: .5em;
