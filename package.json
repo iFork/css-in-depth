@@ -1,0 +1,15 @@
+{
+  "name": "css-in-depth",
+  "version": "1.0.0",
+  "description": "Practice along the 'CSS In Depth' book by K Grant",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --port 7070 --directory --files '**/*.css **/*.html **/*.js !node_modules/**/*' --browser 'google-chrome' ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.14"
+  }
+}
