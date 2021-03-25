@@ -23,17 +23,25 @@ main {
     display: block; /* fixes IE bug where main is rendered inline */
 }
 
+.container {
+    display: table;
+    width: 100%;
+    border-spacing: 1.5em 0; 
+    /* border-spacing: also applies to outer edges,
+    set 0 for top edge,
+    will need negative margin to align with <body> */
+}
+
 .main {
-    float: left;
+    display: table-cell;
     width: 70%;
     background-color: #fff;
     border-radius: .5em;
 }
 
 .sidebar {
-    float: left;
+    display: table-cell;
     width: calc(30% - 1.5em);
-    margin-left: 1.5em;
     padding: 1.5em;
     background-color: #fff;
     border-radius: .5em;
