@@ -23,13 +23,16 @@ main {
     display: block; /* fixes IE bug where main is rendered inline */
 }
 
+.wrapper {
+    /* margin: 0 -1.5em; */
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+}
+
 .container {
     display: table;
     width: 100%;
     border-spacing: 1.5em 0; 
-    /* border-spacing: also applies to outer edges,
-    set 0 for top edge,
-    will need negative margin to align with <body> */
 }
 
 .main {
