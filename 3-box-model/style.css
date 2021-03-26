@@ -43,3 +43,13 @@ main {
     background-color: #fff;
     border-radius: .5em;
 }
+
+.button-link {
+  display: block;
+  padding: 0.5em;
+  margin-top: 1.5em;
+  color: #fff;
+  background-color: #0090c9;
+  text-align: center;
+  text-decoration: none;
+}
