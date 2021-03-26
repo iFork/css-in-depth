@@ -14,6 +14,9 @@ body {
 }
 
 header {
+    padding: 1em 1.5em; 
+    /* now margin of inner h1 elem does not collapse outside this container
+     * but is contained within it, adding up to its inner (vertical) spacing. */
     color: #fff;
     background-color: #0072b0;
     border-radius: 0.5em;
