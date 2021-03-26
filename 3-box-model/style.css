@@ -56,3 +56,10 @@ main {
 .button-link + .button-link {
   margin-top: 1.5em;
 }
+
+.sponsor-link {
+   display: block;
+   color: #0072b0;
+   font-weight: bold;
+   text-decoration: none;
+ }
