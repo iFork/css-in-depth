@@ -5,43 +5,43 @@
 *,
 ::before,
 ::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    background-color: #eee;
-    font-family: Helvetica, Arial, sans-serif;
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 header {
-    padding: 1em 1.5em; 
-    /* now margin of inner h1 elem does not collapse outside this container
-     * but is contained within it, adding up to its inner (vertical) spacing. */
-    color: #fff;
-    background-color: #0072b0;
-    border-radius: 0.5em;
+  padding: 1em 1.5em; 
+  /* now margin of inner h1 elem does not collapse outside this container
+   * but is contained within it, adding up to its inner (vertical) spacing. */
+  color: #fff;
+  background-color: #0072b0;
+  border-radius: 0.5em;
 }
 
 main {
-    display: block; /* fixes IE bug where main is rendered inline */
+  display: block; /* fixes IE bug where main is rendered inline */
 }
 
 .container {
-    display: flex;
+  display: flex;
 }
 
 .main {
-    width: 70%;
-    background-color: #fff;
-    border-radius: .5em;
+  width: 70%;
+  background-color: #fff;
+  border-radius: .5em;
 }
 
 .sidebar {
-    width: 30%;
-    margin-left: 1.5em;
-    padding: 1.5em;
-    background-color: #fff;
-    border-radius: .5em;
+  width: 30%;
+  margin-left: 1.5em;
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: .5em;
 }
 
 .button-link {
@@ -58,8 +58,8 @@ main {
 }
 
 .sponsor-link {
-   display: block;
-   color: #0072b0;
-   font-weight: bold;
-   text-decoration: none;
- }
+  display: block;
+  color: #0072b0;
+  font-weight: bold;
+  text-decoration: none;
+}
