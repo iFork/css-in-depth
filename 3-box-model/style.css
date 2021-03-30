@@ -8,7 +8,11 @@
   box-sizing: inherit;
 }
 
-body * + *  {
+/* body * + *  { */
+/* to work-around <script> inserted by `browser-sync` utility as a first child
+ of <body> and qualifying body's originally only child as an 'adjacent
+ sibling': */
+.body-container * + *  { /* but we increased specificity */
   margin-top: 1.5em;
 }
 
