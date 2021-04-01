@@ -60,3 +60,16 @@ main {
 .clearfix::after {
   clear: both;
 }
+
+.media-image {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.media-body {
+  margin-top: 0;
+}
+
+.media-body h4 {
+  margin-top: 0;
+}
