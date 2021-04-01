@@ -42,8 +42,13 @@ main {
   border-radius: .5em;
 }
 
+/* preventing margin collapsing outside the container */
+.clearfix::before,
 .clearfix::after {
-  content: " ";
-  display: block;
+  content:" ";
+  display: table;
+}
+
+.clearfix::after {
   clear: both;
 }
