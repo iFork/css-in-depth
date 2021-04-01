@@ -34,3 +34,10 @@ main {
   max-width: 1080px;
   margin: 0 auto; /* auto side margins to center */
 }
+
+.media {
+  float: left;
+  width: 50%;
+  background-color: #eee;
+  border-radius: .5em;
+}
