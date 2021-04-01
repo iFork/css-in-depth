@@ -68,8 +68,11 @@ main {
 
 .media-body {
   margin-top: 0;
+  /* establish block formatting context to prevent interplay */
+  overflow: auto;
 }
 
 .media-body h4 {
   margin-top: 0;
 }
+
