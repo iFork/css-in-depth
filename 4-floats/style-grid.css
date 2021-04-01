@@ -61,30 +61,11 @@ main {
 }
 
 .media {
-  float: left;
-  width: calc(50% - 1.5em);
-  margin: 0 1.5em 1.5em 0; /* override margin from owl selector */
-  /* Note: right margins stack up w/ container's padding on the right side */
   padding: 1.5em;
   background-color: #eee;
   border-radius: .5em;
 }
 
-/* clear row above */
-.media:nth-child(odd) {
-  clear: left;
-}
-
-/* preventing margin collapsing outside the container */
-/* and expanding container (background) under all its floats */
-.clearfix::before,
-.clearfix::after {
-  content:" ";
-  display: table;
-}
-.clearfix::after {
-  clear: both;
-}
 
 .media-image {
   float: left;
