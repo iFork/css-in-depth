@@ -42,6 +42,11 @@ main {
   border-radius: .5em;
 }
 
+/* clear row above */
+.media:nth-child(odd) {
+  clear: left;
+}
+
 /* preventing margin collapsing outside the container */
 .clearfix::before,
 .clearfix::after {
