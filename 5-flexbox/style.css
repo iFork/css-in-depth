@@ -1,0 +1,25 @@
+/* fix box sizing */
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/* owl for margins */
+body * + * {
+  margin-top:  1.5em;
+}
+
+/* double container pattern for centering page */
+.container {
+  max-width: 1080px;
+  margin: auto;
+}
+
+body {
+  background-color: #709b90;
+  font-family: Arial, Helvetica, sans-serif;
+}
