@@ -26,16 +26,13 @@ body {
 
 /* nav menu */
 .site-nav {
-  background-color: brown;
-  padding: .5em 1em;
-}
-
-nav > ul {
   display: flex;
+  background-color: #5f4b44;
+  padding: .5em 1em;
   list-style-type: none;
 }
 
-nav > ul > li {
+nav > ul > li { /* same as .site-nav > li */
   margin-top:  0; /* override global owl's margin */
 }
 
@@ -47,10 +44,11 @@ nav > ul > li + li {
   margin-left: auto;
 }
 
-
 nav > ul > li > a {
   padding: 1em 1.5em;
   display: inline-block; /* to prvent margin collapsing outside nav menu */
-  background-color: red;
+  background-color: #cc6b5a;
+  color: white;
+  text-decoration: none;
 }
 
