@@ -66,3 +66,15 @@ nav > ul > li + li {
   margin-top:  0;
   margin-left: 1.5em;
 }
+
+.column-main {
+  flex: 2;
+  /* shorthand for */
+  /* flex-grow: 2; */
+  /* flex-shrink:  1; */
+  /* flex-basis: 0%;; */
+}
+
+.column-sidebar {
+  flex: 1;
+}
