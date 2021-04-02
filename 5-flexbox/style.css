@@ -44,9 +44,9 @@ nav > ul > li + li {
   margin-left: auto;
 }
 
-nav > ul > li > a {
-  padding: 1em 1.5em;
-  display: inline-block; /* to prvent margin collapsing outside nav menu */
+.site-nav > li > a {
+  padding: .5em 1em;
+  display: inline-block; /* to affect container's height */
   background-color: #cc6b5a;
   color: white;
   text-decoration: none;
