@@ -52,3 +52,17 @@ nav > ul > li + li {
   text-decoration: none;
 }
 
+/* sizing flex columns, tiles */
+.flex {
+  display: flex;
+}
+
+.tile {
+  background-color: #fff;
+  padding: 1.5em;
+}
+
+.flex > * + * { /* only direct children except first, i.e. column-sidebar */
+  margin-top:  0;
+  margin-left: 1.5em;
+}
