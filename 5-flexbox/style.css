@@ -23,3 +23,34 @@ body {
   background-color: #709b90;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* nav menu */
+.site-nav {
+  background-color: brown;
+  padding: .5em 1em;
+}
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav > ul > li {
+  margin-top:  0; /* override global owl's margin */
+}
+
+nav > ul > li + li {
+  margin-left: 1.5em;
+}
+
+.nav-right {
+  margin-left: auto;
+}
+
+
+nav > ul > li > a {
+  padding: 1em 1.5em;
+  display: inline-block; /* to prvent margin collapsing outside nav menu */
+  background-color: red;
+}
+
