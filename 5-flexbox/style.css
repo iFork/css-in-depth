@@ -40,8 +40,8 @@ nav > ul > li + li {
   margin-left: 1.5em;
 }
 
-.nav-right {
-  margin-left: auto;
+.site-nav > .nav-right {
+  margin-left: auto; /* fills available space, thanks flexbox */
 }
 
 .site-nav > li > a {
