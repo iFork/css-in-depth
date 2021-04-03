@@ -88,3 +88,18 @@ nav > ul > li + li {
   /* grow vertically */
   flex: 1;
 }
+
+.login-form > h3 {
+  margin: 0;
+  font-size: .9rem;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.login-form button {
+  margin-top: 1em;
+  border-color: 1px solid #cc6b5a;
+  padding: .5em 1em;
+  cursor: pointer;
+}
