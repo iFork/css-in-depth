@@ -68,13 +68,19 @@ nav > ul > li + li {
 }
 
 .column-main {
-  flex: 2;
+  /* in this case, relying on flex and shrink, this column becomes a bit
+   * narrower (and sidebar wider). Reason - this item (column-main.tile) has
+   * padding (while sidebar does not) which affected initial main size
+   * calculation when flex-bases was 0%. 
+   * Providing specific 'main-size' in float-bases gives more precise result
+   * */
+  flex: 66.67%;
   /* shorthand for */
-  /* flex-grow: 2; */
+  /* flex-grow: 1; */
   /* flex-shrink:  1; */
-  /* flex-basis: 0%;; */
+  /* flex-basis: 66.67%; */
 }
 
 .column-sidebar {
-  flex: 1;
+  flex: 33.37%;
 }
