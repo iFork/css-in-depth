@@ -110,3 +110,15 @@ nav > ul > li + li {
   padding: .5em 1em;
   cursor: pointer;
 }
+
+.cta-button {
+  display: block; /* since it is <a>, user agent sets as inline */
+  /* Make block to honor specified vertical padding. Inline element's vertical
+   * padding is ignored and it overlaps with agjacent lines. 
+   * Also block automatically makes width 100%. */
+  background-color: #cc6b5a;
+  color: white;
+  padding: .5em 1em; /* here horizontal padding has no effec since this is block
+  with 100% width */
+  text-decoration: none;
+}
