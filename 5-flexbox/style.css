@@ -97,6 +97,13 @@ nav > ul > li + li {
   text-transform: uppercase;
 }
 
+/* all text like inputs */
+.login-form input:not([type=checkbox]):not([type=radio]) {
+  display: block; /* user agent's is inline-block */
+  width: 100%; /* by default, input's width is from size prop */
+  margin-top: 0;
+}
+
 .login-form button {
   margin-top: 1em;
   border-color: 1px solid #cc6b5a;
