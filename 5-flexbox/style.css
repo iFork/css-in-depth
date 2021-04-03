@@ -125,6 +125,7 @@ nav > ul > li + li {
 .cost {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .cost > span { /* override global owl's margin */
