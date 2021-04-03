@@ -111,6 +111,38 @@ nav > ul > li + li {
   cursor: pointer;
 }
 
+.centered {
+  text-align:  center;
+}
+
+.tile.centered > small {
+  font-size: .8em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* flexbox of cost's inline spans */
+.cost {
+  display: flex;
+  align-items: center;
+}
+
+.cost > span { /* override global owl's margin */
+  margin-top: 0;
+}
+
+.cost-currency {
+  font-size: 2em;
+}
+
+.cost-dollars {
+  font-size: 4em;
+}
+
+.cost-cents {
+  font-size: 1.5em;
+}
+
 .cta-button {
   display: block; /* since it is <a>, user agent sets as inline */
   /* Make block to honor specified vertical padding. Inline element's vertical
