@@ -80,3 +80,26 @@ nav {
 .site-nav > .nav-right {
   margin-left: auto;
 }
+
+/* login sidebar */
+.login-form h3 {
+  margin: 0;
+  font-size: .9em;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.login-form input:not([type=checkbox]):not([type=radio]) {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+}
+
+.login-form button {
+  margin-top: 1em;
+  padding: .5em 1em;
+  border: 1px solid #cc6b5a;
+  cursor: pointer;
+  background-color: white;
+}
