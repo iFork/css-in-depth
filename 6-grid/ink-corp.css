@@ -17,6 +17,14 @@ body {
   padding: 1.5em;
 }
 
+.tile > :first-child {
+  margin-top: 0; /* to not mix margin w/ tile's padding */
+}
+
+.tile * + * { /* in place of global owl */
+  margin-top: 1.5em;
+}
+
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr;
