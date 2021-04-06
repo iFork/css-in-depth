@@ -12,6 +12,16 @@ body {
   background-color: #709b90;
 }
 
+.portfolio {
+  display: grid;
+  /* place as many tracks onto the grid as it can fit, without violating the */
+  /* restrictions set by the specified size (minmax()) */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* because no track can be larger than 1 fr (our maximum value), all the grid */
+  /* tracks will be the same size */
+  grid-auto-rows: 1fr; /* size of implicit rows - same size */
+  grid-gap: 1em;
+}
 .portfolio > figure {
   margin: 0;
 }
