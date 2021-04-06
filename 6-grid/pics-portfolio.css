@@ -41,3 +41,7 @@ body {
   text-align: right;
 }
 
+.portfolio .featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
