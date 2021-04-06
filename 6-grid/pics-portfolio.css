@@ -23,15 +23,15 @@ body {
   grid-gap: 1em;
 }
 .portfolio > figure {
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 
 .portfolio img {
   max-width: 100%; /* contain images within a viewport */
-  vertical-align: middle;
-  /* Note: Since image is an inline object and it has a line-height -
-   * there is a gap between img and next block element (figcaption). 
-   * vertical-align middle or bottom removes the gap. */
+  flex: 1; /* flex-grow to streatch img to fill the grid area */
+  object-fit: cover; /* to not distort the image */
 }
 
 .portfolio figcaption {
