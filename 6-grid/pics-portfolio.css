@@ -12,29 +12,22 @@ body {
   background-color: #709b90;
 }
 
-.portfolio {
-  display: grid;
-  /* place as many tracks onto the grid as it can fit, without violating the */
-  /* restrictions set by the specified size (minmax()) */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* because no track can be larger than 1 fr (our maximum value), all the grid */
-  /* tracks will be the same size */
-  grid-auto-rows: 1fr; /* size of implicit rows - same size */
-  grid-gap: 1em;
-  /* grid-auto-flow: column;  <- produces only 1 row (default) w/ horizontal
-   * scroll as we do not specify number of rows like we do for columns */
-  grid-auto-flow: dense; /* equivalent to `row dense` */
-}
+/* fallback in case grid is not supported */
 .portfolio > figure {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+  display: inline-block;
+  /* Note: white space in source between inline elements is honored */
+  max-width: 300px;
+  margin: .1em;
 }
 
 .portfolio img {
-  max-width: 100%; /* contain images within a viewport */
-  flex: 1; /* flex-grow to streatch img to fill the grid area */
+  max-width: 100%; /* contain images within viewport */
   object-fit: cover; /* to not distort the image */
+  vertical-align: middle;
+  /* Note: Since in this fallback we are not using flex grow and
+   * image is an inline object and it has a line-height -
+   * there is a gap between img and next block element (figcaption). 
+   * vertical-align middle or bottom removes the gap. */
 }
 
 .portfolio figcaption {
@@ -44,7 +37,34 @@ body {
   text-align: right;
 }
 
-.portfolio .featured {
-  grid-column: span 2;
-  grid-row: span 2;
+@supports (display:grid) { 
+  .portfolio {
+      display: grid;
+      /* place as many tracks onto the grid as it can fit, without violating the */
+      /* restrictions set by the specified size (minmax()) */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      /* because no track can be larger than 1 fr (our maximum value), all the grid */
+      /* tracks will be the same size */
+      grid-auto-rows: 1fr; /* size of implicit rows - same size */
+      grid-gap: 1em;
+      /* grid-auto-flow: column;  <- produces only 1 row (default) w/ horizontal
+      * scroll as we do not specify number of rows like we do for columns */
+      grid-auto-flow: dense; /* equivalent to `row dense` */
+  }
+
+  .portfolio > figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* override fallback value */
+    max-width: initial; /* override fallback value */
+  }
+
+  .portfolio img {
+    flex: 1; /* flex-grow to streatch img to fill the grid area */
+  }
+
+  .portfolio .featured {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
