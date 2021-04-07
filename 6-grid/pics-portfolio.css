@@ -21,6 +21,9 @@ body {
   /* tracks will be the same size */
   grid-auto-rows: 1fr; /* size of implicit rows - same size */
   grid-gap: 1em;
+  /* grid-auto-flow: column;  <- produces only 1 row (default) w/ horizontal
+   * scroll as we do not specify number of rows like we do for columns */
+  grid-auto-flow: dense; /* equivalent to `row dense` */
 }
 .portfolio > figure {
   display: flex;
