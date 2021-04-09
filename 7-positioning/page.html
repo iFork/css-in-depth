@@ -11,14 +11,14 @@
       <div class="top-banner-inner">
         <p>
         Find out what's going on at Wombat coffee&mdash;sign up for a newsletter.
-        <button id="open-modal">Sign up</button>
+        <button id="modal-open">Sign up</button>
         </p>
       </div>
     </header>  
     <div class="modal" id="modal">
       <div class="modal-backdrop"></div>
       <div class="modal-body">
-        <button id="close-modal" class="close-modal">close</button>
+        <button id="modal-close" class="modal-close">close</button>
         <h2>Wombat Newsletter</h2>
         <p>Sign up for monthly newsletter.</p>
         <form>
@@ -32,8 +32,8 @@
     </div>
   </body>
   <script>
-    const openModal = document.getElementById('open-modal');
-    const closeModal = document.getElementById('close-modal')
+    const openModal = document.getElementById('modal-open');
+    const closeModal = document.getElementById('modal-close')
     const modal = document.getElementById('modal')
     openModal.addEventListener('click', function (evt) {
       modal.style.display = 'block';
