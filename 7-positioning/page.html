@@ -15,10 +15,10 @@
         </p>
       </div>
     </header>  
-    <div class="modal">
+    <div class="modal" id="modal">
       <div class="modal-backdrop"></div>
       <div class="modal-body">
-        <button id="modal-close" class="close-modal">close</button>
+        <button id="close-modal" class="close-modal">close</button>
         <h2>Wombat Newsletter</h2>
         <p>Sign up for monthly newsletter.</p>
         <form>
@@ -31,4 +31,15 @@
       </div>
     </div>
   </body>
+  <script>
+    const openModal = document.getElementById('open-modal');
+    const closeModal = document.getElementById('close-modal')
+    const modal = document.getElementById('modal')
+    openModal.addEventListener('click', function (evt) {
+      modal.style.display = 'block';
+    })
+    closeModal.addEventListener('click', function (evt) {
+      modal.style.display = 'none';
+    })
+  </script>
 </html>
