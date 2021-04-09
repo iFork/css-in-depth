@@ -57,5 +57,9 @@ button {
 }
 
 .modal-close {
+  position: absolute;
+  top: .3em;
+  right: .3em;
+  padding: .3em;
   cursor: pointer;
 }
