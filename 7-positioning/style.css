@@ -62,4 +62,19 @@ button {
   right: .3em;
   padding: .3em;
   cursor: pointer;
+  text-indent: 10em; /* hide text content */
+  height: 1em; /* make a square */
+  width: 1em; /* fix to not allow text-indent to stretch the witdth */
+  overflow: hidden; /* to hide the overly indented content */
+  font-size: 2em;
+  border: 0;
+}
+
+.modal-close::after {
+  content: "\00D7"; /* multiplication / &times symbol */
+  line-height: .5; /* make line-height fit tighter around the &times symbol */
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  text-indent: 0; /* override inherited text-indent */
 }
