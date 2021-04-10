@@ -87,6 +87,8 @@ button {
 
 .dropdown {
   display: inline-block;
+  position: relative; /* establish containing block for absolutely positioned
+  child */
 }
 
 .dropdown-label {
@@ -98,6 +100,12 @@ button {
 .dropdown-menu {
   display: none;
   background-color: #eee;
+  position: absolute;
+  /* default for position properties (top, left, ...) is `auto` which keeps 
+   * elements in their static position */
+  top: 2.2em; /* puts slightly higher, closer to label than its static position 
+  * from default `auto` value, showing only 1 border instead of 2 (label's
+  * border + submenu border */
 }
 
 .dropdown:hover .dropdown-menu {
