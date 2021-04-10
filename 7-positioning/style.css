@@ -43,6 +43,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 
 .modal-body {
@@ -54,6 +55,7 @@ button {
   background-color: #fff;
   padding: 2em 3em;
   overflow: auto;
+  z-index: 2;
 }
 
 .modal-close {
