@@ -106,6 +106,9 @@ button {
   top: 2.2em; /* puts slightly higher, closer to label than its static position 
   * from default `auto` value, showing only 1 border instead of 2 (label's
   * border + submenu border */
+  min-width: 100%; /* Fix - after absolute positioning element looses reference
+  for its block dimensions (its container's width to fill).
+  */
 }
 
 .dropdown:hover .dropdown-menu {
