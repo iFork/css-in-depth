@@ -96,7 +96,12 @@ button {
 }
 
 .dropdown-menu {
+  display: none;
   background-color: #eee;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .submenu {
