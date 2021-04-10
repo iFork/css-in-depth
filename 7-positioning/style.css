@@ -92,9 +92,26 @@ button {
 }
 
 .dropdown-label {
-  padding: .5em 1em;
+  padding: .5em 2em .5em 1em; /* right padding to make room for triangle */
   border: 1px solid #ccc;
   background-color: #eee;
+}
+
+.dropdown-label::after {
+  content: "";
+  border: .3em solid; /* set same width for all borders to get equilateral
+  triangle */
+  /* border-top-width: .5em; */
+  /* if we thicken only one side of a border we get non-equilateral triangle */
+  border-color: black transparent transparent;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.dropdown:hover .dropdown-label::after {
+  border-color: transparent transparent black transparent;
+  top: .7em;
 }
 
 .dropdown-menu {
