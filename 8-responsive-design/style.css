@@ -1,5 +1,6 @@
 :root {
   box-sizing: border-box;
+  font-size: calc(1vw + .6em);
 }
 *,
 ::before,
