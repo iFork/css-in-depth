@@ -42,8 +42,14 @@ body {
 .hero {
   text-align: center;
   background-image: url(coffee-beans.jpg);
+  /* override `auto` sizing which uses inherent dimensions (w/o rescaling).
+   * Also, `background-repeat` prop's initial value is `repeat`. 
+   * By making background image width to be 100% of its container, there will be
+   * no repeat on x axis when container gets wider than image. */
+  background-size: 100%; 
   color: white;
   padding: 2em 1em;
+  text-shadow: .1em .1em .3em #000;
 }
 
 main {
