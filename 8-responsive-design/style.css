@@ -13,6 +13,13 @@ body {
   margin: 0;
 }
 
+@media print {
+  * {
+    background: none !important;
+    color: black !important;
+   }
+}
+
 a:link {
   color: #1476b8;
   font-weight: bold;
