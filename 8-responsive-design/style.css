@@ -107,11 +107,23 @@ a:active {
 
 .nav-menu {
   list-style-type: none;
+  /* to tuck dropdown under toggler */
+  margin: 0;
+  padding-left:  0;
+  border: 1px solid #ccc;
+  background-color: black;
+  color: white;
 }
 
 .nav-menu > li > a {
-  display: inline-block;
-  padding: .5em 1em;
+  display: block;
+  padding: .8em 1em;
+  color: white;
+  font-weight: normal;
+}
+
+.menu-dropdown li + li {
+  border-top: 1px solid #ccc;
 }
 
 .hero {
