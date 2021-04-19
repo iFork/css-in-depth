@@ -45,6 +45,54 @@ a:active {
   margin: 0;
 }
 
+.menu {
+  /* establish containing block for both absolutely positioned children */
+  position: relative; 
+}
+
+.menu-toggle {
+  position: absolute;
+  top: -1.2em;
+  right: .1em;
+
+  width: 1em;
+  height: 1em;
+
+  /* NOTE:XXX: In Firefox button's side borders widths turn to be wider than 
+   * top/bottom borders while Firefox user agent styles specify same 2px border
+   * on all sides. Why is it so?
+   * This distorts the width/height props behavior even when here we have
+   * box-sizing: border-box; 
+   * Chrome behaves as expected.
+   * FIX: To fix discrepancy reset css - set border prop.
+   */
+  border: 0;
+  background-color: transparent;
+  
+  /* NOTE: increase font size here, not just in pseudo-element */
+  font-size: 3rem;
+  /* make button fit tighter around the content */
+  line-height: .4; 
+
+  /* content replacement trick */
+  text-indent: 5em;
+  /* wrapped part of the hidden text may come back to reappear in in the box */
+  white-space: nowrap; 
+  overflow: hidden;
+}
+
+.menu-toggle::before {
+  content: "\2261"; /* hamburger symbol */
+  /* NOTE: we need both - to override text-indent and to absolutely position 
+   * pseudo-element to push it to the left edge. */
+  text-indent: 0;
+  position: absolute;
+  /* center symbol inside button by positioning */
+  left: .2em;
+  top: .2em;
+  /* display: block; */
+}
+
 .nav-menu {
   list-style-type: none;
 }
