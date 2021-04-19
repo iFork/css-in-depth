@@ -40,5 +40,15 @@
         </section>
       </div>
     </main>
+    <script>
+      (function () { 
+        const menuToggler = document.getElementById('toggle-menu');
+        menuToggler.addEventListener('click', function (evt) {
+          const mainNavMenu = document.getElementById('main-menu');
+          mainNavMenu.classList.toggle('is-open');
+        })
+      })();
+
+    </script>
   </body>
 </html>

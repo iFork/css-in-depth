@@ -93,6 +93,18 @@ a:active {
   /* display: block; */
 }
 
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  /* cover all viewport width */
+  left: 0;
+  right: 0;
+}
+
+.menu.is-open .menu-dropdown {
+  display: block;
+}
+
 .nav-menu {
   list-style-type: none;
 }
