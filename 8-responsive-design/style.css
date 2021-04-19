@@ -179,3 +179,17 @@ main {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
+
+@media (min-width: 35em) {
+  .row {
+    display: flex;
+  }
+  .col {
+    flex: 1;
+    margin-left: 1em;
+  }
+  main {
+    /* cancel out 1st left margin of col */
+    margin-left: -1em;
+  }
+}
