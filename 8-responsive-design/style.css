@@ -98,6 +98,11 @@ a:active {
   white-space: nowrap; 
   overflow: hidden;
 }
+@media (min-width: 35em) {
+  .menu-toggle {
+    display: none;
+  }
+}
 
 .menu-toggle::before {
   content: "\2261"; /* hamburger symbol */
@@ -123,6 +128,15 @@ a:active {
   display: block;
 }
 
+@media (min-width: 35em) {
+  .menu-dropdown {
+    /* reveal dropdown contents */
+    display: block;
+    /* override absolute positioning, annuls top/left/right.. props */
+    position: static;
+  }
+}
+
 .nav-menu {
   list-style-type: none;
   /* to tuck dropdown under toggler */
@@ -132,6 +146,16 @@ a:active {
   background-color: black;
   color: white;
 }
+@media (min-width: 35em) {
+  .nav-menu {
+    display: flex;
+    border: none;
+    padding: 0 1em;
+  }
+  .nav-menu > li {
+    flex: 1;
+  }
+}
 
 .nav-menu > li > a {
   display: block;
@@ -139,9 +163,21 @@ a:active {
   color: white;
   font-weight: normal;
 }
+@media (min-width: 35em) {
+  .nav-menu > li > a {
+    /* decrease padding assuming fine pointer device */
+    padding: .3em;
+    text-align: center;
+  }
+}
 
 .menu-dropdown li + li {
   border-top: 1px solid #ccc;
+}
+@media (min-width: 35em) {
+  .menu-dropdown li + li {
+    border-top: none;
+  }
 }
 
 .hero {
