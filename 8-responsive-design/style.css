@@ -219,13 +219,14 @@ main {
 @media (min-width: 35em) {
   .row {
     display: flex;
+    /* compensate for column gutters at side edges */
+    margin-left: -.75em;
+    margin-right: -.75em;
   }
   .col {
     flex: 1;
-    margin-left: 1em;
-  }
-  main {
-    /* cancel out 1st left margin of col */
-    margin-left: -1em;
+    /* use both left and right margins for gutter to be also at both edges */
+    margin-left: .75em;
+    margin-right: .75em;
   }
 }
