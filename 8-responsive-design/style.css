@@ -2,6 +2,12 @@
   box-sizing: border-box;
   font-size: calc(1vw + .6em);
 }
+@media (min-width: 50em) {
+  :root {
+    /* cap max font size (at ~ 18px) */
+    font-size: 1.125em;
+  }
+}
 *,
 ::before,
 ::after {
