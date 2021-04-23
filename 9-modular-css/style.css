@@ -135,23 +135,26 @@ header {
 
 .dropdown {
   display: inline-block;
+  position: relative;
 }
 
 .dropdown__toggle {
   background-color: #eee;
   border: 1px solid #ccc;   
-  padding: .5em 1.5em;
+  padding: .5em 2em .5em 1.5em;
   font-size: 1rem;
 }
 .dropdown__toggle::after {
   content: "";
-  display: inline-block;
-
   border: .3em solid;
   border-color: black transparent transparent;
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }
 .dropdown.is-open .dropdown__toggle::after {
   border-color: transparent transparent black;
+  top: .7em;
 }
 
 .dropdown__drawer {
@@ -161,5 +164,20 @@ header {
   display: block;
 }
 
+.menu {
+  background-color: #eee;
+  /* padding: .3em 1em; */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+}
+
+.menu > li {
+  padding: .3em 1em;
+}
+.menu > li + li {
+  border-top: 1px solid gray;
+}
 /* utility classes */
 
