@@ -159,7 +159,14 @@ header {
 
 .dropdown__drawer {
   display: none;
+  position: absolute;
+  top: 2.1em; /* slightly above the bottom of the toggle */
+  left: 0;
+   /* positioning takes this out from the flow and parent's width is 
+   * no more reference for this */
+  min-width: 100%; 
 }
+
 .dropdown.is-open .dropdown__drawer {
   display: block;
 }
