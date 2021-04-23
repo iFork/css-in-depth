@@ -38,6 +38,32 @@ header {
 
 /* modules */
 
+.message {
+  border: 1px solid #265559;
+  padding: .8em 1.2em;
+  margin: .3em 0;
+  border-radius: .2em;
+  color: #265559;
+  background-color: #e0f0f2;
+}
+
+.message--success {
+  border-color: #2f5926;
+  color: #2f5926;
+  background-color: #cfe8c9;
+}
+
+.message--warning {
+  border-color: #594826;
+  color: #594826;
+  background-color: lightgoldenrodyellow;
+}
+
+.message--error {
+  border-color: #59262f;
+  color: #59262f;
+  background-color: #e8c9cf;
+}
 
 /* utility classes */
 
