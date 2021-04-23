@@ -172,19 +172,26 @@ header {
 }
 
 .menu {
-  background-color: #eee;
-  /* padding: .3em 1em; */
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
 }
 
-.menu > li {
-  padding: .3em 1em;
+.menu > li > a {
+  display: block;
+  padding: .5em 1.5em;
+  text-decoration: none;
+  color: #369;
+  background-color: #eee;
 }
+.menu > li > a:hover {
+  background-color: #fff;
+}
+
 .menu > li + li {
-  border-top: 1px solid gray;
+  border-top: 1px solid #ccc;
 }
+
 /* utility classes */
 
