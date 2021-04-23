@@ -1,0 +1,43 @@
+/* base styles */
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+
+.header-container {
+  background-color: lightgreen;
+  padding: 1em 0; /* prevents child h1's margin collapsing outside */
+}
+header {
+  max-width: 80%; 
+  margin: 0 auto;
+}
+
+.page-container {
+  max-width: 80%; 
+  margin: 0 auto;
+}
+
+
+/* modules */
+
+
+/* utility classes */
+
