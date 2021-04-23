@@ -64,5 +64,16 @@
         </div>
       </main>
     </div>
+    <script>
+      // dropdown toggling
+      (function () {
+        const dropdownToggler = document.querySelector('.dropdown__toggle');
+        dropdownToggler.addEventListener('click', function (evt ) {
+          // const dropdown = document.querySelector('.dropdown');
+          const dropdown = evt.target.parentNode;
+          dropdown.classList.toggle('is-open');
+        })
+      })()
+    </script>
   </body>
 </html>
