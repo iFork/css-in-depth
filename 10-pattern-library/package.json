@@ -1,0 +1,17 @@
+{
+  "name": "10-pattern-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:styleguide": "npx kss --config kss-config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "kss": "^3.0.1"
+  }
+}

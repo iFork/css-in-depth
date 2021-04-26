@@ -1,0 +1,12 @@
+{
+  "title": "Pattern library",
+  "source": [
+    "./css"
+  ],
+  "destination": "styleguide/",
+  "css": [
+    "../css/style.css"
+  ],
+  "js": [
+  ]
+}

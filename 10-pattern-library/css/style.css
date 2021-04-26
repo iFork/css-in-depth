@@ -1,0 +1,44 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/**
+ * Media
+ *
+ * Display an image on the left and body content on the right.
+ *
+ * Markup: media.html
+ *
+ * Styleguide Media
+ */
+.media {
+  padding: 1.5em;
+  border-radius: .5em;
+  background-color: #eee;
+}
+.media::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.media__image {
+  float: left;
+  margin-right: 1.5em;
+}
+.media__body {
+  overflow: auto; /* make block formatting context */
+  margin-top: 0;
+}
+.media__body > h4 {
+  margin-top: 0;
+}
+
