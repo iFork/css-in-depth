@@ -1,11 +1,12 @@
 {
   "title": "Pattern library",
   "source": [
-    "./css"
+    "./src/styles"
   ],
-  "destination": "styleguide/",
+  "destination": "assets/styleguide",
+  "//": "need to include styles here to style markup examples in doc pages",
   "css": [
-    "../css/style.css"
+    "../../src/styles/style.css"
   ],
   "js": [
   ]

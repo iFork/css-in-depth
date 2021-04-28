@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-  },
+  "directories": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:styleguide": "npx kss --config kss-config.json"
+    "gulp": "gulp",
+    "build:styleguide": "gulp styleguide",
+    "watch": "gulp watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "del": "^6.0.0",
+    "execa": "^5.0.0",
+    "gulp": "^4.0.2",
     "kss": "^3.0.1"
   }
 }
