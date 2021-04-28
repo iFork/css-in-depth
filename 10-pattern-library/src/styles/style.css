@@ -42,3 +42,45 @@ body {
   margin-top: 0;
 }
 
+/**
+ * Button
+ *
+ * Buttons are available in number of sizes and colors.
+ * You can mix and match any color with any size.
+ *
+ * Markup: button.html
+ *
+ * .button--success - A green success button
+ * .button--danger  - A red danger button
+ * .button--large   - A large button
+ * .button--small   - A small button
+ *
+ * Styleguide Button
+ */
+.button {
+  border: 1px solid #265559;
+  padding: 1em 1.25em;
+  background-color: transparent;
+  border-radius: .2em;
+  color: #333;
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.button--success {
+  border-color: #cfe8c9;
+  background-color: #2f5926;
+  color: white;
+}
+.button--danger {
+  border-color: #e8c9c9;
+  background-color: #a92323;
+  color: white;
+}
+
+.button--large {
+  font-size: 1.2rem;
+}
+.button--small {
+  font-size: .8rem;
+}
