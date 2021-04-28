@@ -1,5 +1,6 @@
 {
   "title": "Pattern library",
+  "homepage": "./src/styles/homepage.md",
   "source": [
     "./src/styles"
   ],
