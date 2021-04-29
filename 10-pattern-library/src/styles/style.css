@@ -150,6 +150,8 @@ body {
  * Markup:
  * <p class="text-center">Centered text</p>
  *
+ * Weight: 1
+ *
  * Styleguide Utility.text-center
  */
 .text-center {
@@ -160,6 +162,8 @@ body {
  * Float left
  *
  * Float an element to the left with `float-left`
+ *
+ * Weight: 3
  *
  * Styleguide Utility.float-left
  */
@@ -176,6 +180,8 @@ body {
  * <div class="clearfix">
  *  <span class="float-left">Floated</span>
  * </div>
+ *
+ * Weight: 2
  *
  * Styleguide Utility.clearfix
  */
