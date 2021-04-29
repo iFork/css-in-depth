@@ -99,14 +99,12 @@ body {
  */
 .dropdown {
   position: relative;
-  background-color: #eee;
   display: inline-block;
 }
 
 .dropdown__toggle {
   background-color: #eee;
   border: 1px solid #ccc;
-  border-radius: .2em;
   padding: .5em 2em .5em 1.5em;
 }
 .dropdown__toggle::after {
@@ -114,7 +112,7 @@ body {
   position: absolute;
   top: 1em;
   right: 1em;
-  border: 5px solid black;
+  border: .3em solid;
   border-color: black transparent transparent;
 }
 .dropdown.is-open .dropdown__toggle::after {
@@ -125,7 +123,8 @@ body {
 .dropdown__drawer {
   display: none;
   position: absolute;
-  background-color: inherit;
+  top: 2.1em;
+  background-color: #eee;
   /* set min width in relation to its parent element i.e. .dropdown
    * NOTE:
    * Seems to set its width not in relation to its direct parent i.e. .dropdown
@@ -141,5 +140,4 @@ body {
 }
 .dropdown.is-open .dropdown__drawer {
   display: block;
-  top: 2.1em;
 }
