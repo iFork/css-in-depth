@@ -14,28 +14,25 @@ body {
 /**
  * Media
  *
- * Display an image on the left and body content on the right.
+ * Display an images and or body content beside one another.
  *
  * Markup: media.html
  *
  * Styleguide Media
  */
 .media {
+  display: flex;
+  align-items: flex-start; /* default is stretch, fix stretching images */
   padding: 1.5em;
   border-radius: .5em;
   background-color: #eee;
 }
-.media::after {
-  content: "";
-  display: block;
-  clear: both;
+
+.media > * + * {
+  margin-left: 1.5em;
 }
-.media__image {
-  float: left;
-  margin-right: 1.5em;
-}
+
 .media__body {
-  overflow: auto; /* make block formatting context */
   margin-top: 0;
 }
 .media__body > h4 {
