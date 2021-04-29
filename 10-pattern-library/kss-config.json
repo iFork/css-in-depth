@@ -10,5 +10,6 @@
     "../../src/styles/style.css"
   ],
   "js": [
+    "../../src/scripts/docs.js"
   ]
 }

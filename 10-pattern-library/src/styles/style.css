@@ -84,3 +84,62 @@ body {
 .button--small {
   font-size: .8rem;
 }
+
+/**
+ * Dropdown
+ *
+ * A dropdown menu. Clicking the toggle button opens and closes the drawer.
+ *
+ * Use JavaScript to toggle `is-open` class in order to open and close the
+ * dropdown.
+ *
+ * Markup: dropdown.html
+ *
+ * Styleguide Dropdown
+ */
+.dropdown {
+  position: relative;
+  background-color: #eee;
+  display: inline-block;
+}
+
+.dropdown__toggle {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: .2em;
+  padding: .5em 2em .5em 1.5em;
+}
+.dropdown__toggle::after {
+  content: " ";
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: 5px solid black;
+  border-color: black transparent transparent;
+}
+.dropdown.is-open .dropdown__toggle::after {
+  top: .7em;
+  border-color: transparent transparent black;
+}
+
+.dropdown__drawer {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  /* set min width in relation to its parent element i.e. .dropdown
+   * NOTE:
+   * Seems to set its width not in relation to its direct parent i.e. .dropdown
+   * but *in relation to a parent which is (relatively) positioned*.
+   * If there is no such parent (like a relatively positioned element is not its
+   * parent but a sibling), width is set *in relation to body*.
+   * XXX: Therefore, *make sure to relatively position a common parent*, not a
+   * sibling.
+   * In this case relatively position its direct parent i.e. .dropdown for
+   * min-width percents to be in relation to the .dropdown.
+   * */
+  min-width: 100%;
+}
+.dropdown.is-open .dropdown__drawer {
+  display: block;
+  top: 2.1em;
+}
