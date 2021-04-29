@@ -141,3 +141,50 @@ body {
 .dropdown.is-open .dropdown__drawer {
   display: block;
 }
+
+/**
+ * Text center
+ *
+ * Center text within a block
+ *
+ * Markup:
+ * <p class="text-center">Centered text</p>
+ *
+ * Styleguide Utility.text-center
+ */
+.text-center {
+  text-align: center !important;
+}
+
+/**
+ * Float left
+ *
+ * Float an element to the left with `float-left`
+ *
+ * Styleguide Utility.float-left
+ */
+.float-left {
+  float: left;
+}
+
+/**
+ * Clearfix
+ *
+ * Force element to contain its floated contents
+ *
+ * Markup:
+ * <div class="clearfix">
+ *  <span class="float-left">Floated</span>
+ * </div>
+ *
+ * Styleguide Utility.clearfix
+ */
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::before {
+  clear: both;
+}
+
