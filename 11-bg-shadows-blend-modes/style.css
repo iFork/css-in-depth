@@ -47,3 +47,23 @@ body {
   );
 }
 
+.radial-fade {
+  background-image: radial-gradient(white, blue);
+}
+
+.radial-fade-corner {
+  background-image: radial-gradient(5em at 20px 30px,
+    white,
+    skyblue
+  );
+}
+.radial-multicolor-fade {
+  background-image: radial-gradient(circle,
+    white 20%,
+    lightyellow 40%,
+    skyblue 60%,
+    royalblue 80%,
+    midnightblue
+  );
+}
+
