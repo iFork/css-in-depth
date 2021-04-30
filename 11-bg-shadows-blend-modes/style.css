@@ -67,3 +67,15 @@ body {
   );
 }
 
+.concentric-fade {
+  background-image: repeating-radial-gradient(circle,
+    chocolate 10%,
+    brown 20%
+  );
+}
+.concentric-stripes {
+  background-image: repeating-radial-gradient(circle,
+    crimson, crimson 20%,
+    white 20%, white 40%
+  );
+}
