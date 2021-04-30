@@ -93,6 +93,12 @@ body {
   font-size: .8rem;
 }
 
+.button-skeu:hover {
+  background-image: linear-gradient(to bottom,
+   #456ab6, 
+   #148);
+}
+
 .button-skeu:focus {
   /* Chrome reset */
   outline: none;
