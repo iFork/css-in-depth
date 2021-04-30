@@ -1,0 +1,36 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.demo-rectangle {
+  width: 300px;
+  height: 150px;
+  border-radius:  .2em;
+  margin: 1em;
+}
+
+.fade {
+  background-image: linear-gradient(to right, white, blue);
+}
+
+.fade-jive {
+  background-image: linear-gradient(25deg, 
+    yellow 5%, white 40%, blue 100%);
+
+}
+.three-stripes {
+  background-image: linear-gradient(186deg, 
+    red 33%, 
+    blue 33%, blue 66%,
+    orange 66%, orange 100%);
+}
+
