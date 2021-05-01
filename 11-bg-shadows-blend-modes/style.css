@@ -129,3 +129,25 @@ button + button {
 .button-flat:active {
   background-color: #148;
 }
+
+.button-modern {
+  border: 0;
+  border-radius: .5em;
+  font-size: 1rem;
+  padding: .8em;
+  color: white;
+  background-color: #57b;
+  box-shadow: 0 .4em 0 #148;
+  text-shadow: 1px 1px #148;
+}
+
+.button-modern:hover,
+.button-modern:focus {
+  background-color: #456ab5;
+}
+
+.button-modern:active {
+  transform: translateY(.1em);
+  background-color: #456ab5;
+  box-shadow: 0 .3em 0 #148;
+}
