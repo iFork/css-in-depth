@@ -191,6 +191,22 @@ button + button {
   background-repeat: no-repeat;
 }
 
+.bear-on-canvas {
+  background-image: 
+    url('images/bear.jpg'), 
+    url('images/scratches.png');
+  background-size: 700px;
+  background-repeat: no-repeat;
+}
+
+.canvas-on-bear {
+  background-image: 
+    url('images/scratches.png'),
+    url('images/bear.jpg');
+  background-size: 700px;
+  background-repeat: no-repeat;
+}
+
 .overlapping-stripes {
   background-image: 
     /* linear-gradient(lime, white), */
