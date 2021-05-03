@@ -18,6 +18,13 @@ body {
   margin: 1em;
 }
 
+.demo-rectangle-large {
+  min-width: 600px;
+  min-height: 400px;
+  border-radius:  .2em;
+  margin: 1em;
+}
+
 .fade {
   background-image: linear-gradient(to right, white, blue);
 }
@@ -184,19 +191,69 @@ button + button {
   background-repeat: no-repeat;
 }
 
+.overlapping-stripes {
+  background-image: 
+    /* linear-gradient(lime, white), */
+    linear-gradient(chocolate, white),
+    linear-gradient(royalblue, royalblue),
+    linear-gradient(chocolate, white);
+  background-size: 40vw, 40vw, 40vw;
+  background-repeat: no-repeat; /* NOTE: othervise only first bg will be visible */
+  background-position: 0, 30vw, 60vw;
+}
 
 /* utility classes */
 
+/* darkening dlend modes */
+
 .blend-multiply {
   background-blend-mode: multiply;
+}
+
+.blend-darken {
+  background-blend-mode: darken;
 }
 
 .blend-burn {
   background-blend-mode: color-burn;
 }
 
+/* lightning dlend modes */
+
+.blend-screen {
+  background-blend-mode: screen;
+}
+
+.blend-lighten {
+  background-blend-mode: lighten;
+}
+
 .blend-dodge {
   background-blend-mode: color-dodge;
+}
+
+/* contrasting dlend modes */
+
+.blend-overlay {
+  background-blend-mode: overlay;
+}
+
+.blend-hard-light {
+  background-blend-mode: hard-light;
+}
+
+.blend-soft-light {
+  background-blend-mode: soft-light;
+}
+
+/* composite dlend modes */
+
+.blend-hue {
+  background-blend-mode: hue;
+}
+
+.blend-saturation {
+  background-blend-mode: saturation;
 }
 
 .blend-luminosity {
@@ -207,7 +264,13 @@ button + button {
   background-blend-mode: color;
 }
 
+/* comparative dlend modes */
+
 .blend-diff {
   background-blend-mode: difference;
+}
+
+.blend-exclusion {
+  background-blend-mode: exclusion;
 }
 
