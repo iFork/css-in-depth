@@ -164,6 +164,26 @@ button + button {
   background-position: 30vw, -30vw;
 }
 
+.bear-on-bg {
+  background-image: 
+    url('images/bear.jpg');
+  background-color: #148;
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bear-on-gradient {
+  background-image: 
+    url('images/bear.jpg'), 
+    linear-gradient(to bottom,
+      skyblue,
+      chocolate
+    );
+  background-size: 700px;
+  background-repeat: no-repeat;
+}
+
 
 /* utility classes */
 
