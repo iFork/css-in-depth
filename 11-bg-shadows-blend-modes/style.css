@@ -151,3 +151,43 @@ button + button {
   background-color: #456ab5;
   box-shadow: 0 .3em 0 #148;
 }
+
+.overlapping-bears {
+  background-image: url('images/bear.jpg'), url('images/bear.jpg');
+  background-size: 400px, 400px;
+  background-repeat: no-repeat;
+  background-position: 0 0, 200px 0;
+}
+
+.overlapping-bears--large {
+  background-size: cover;
+  background-position: 30vw, -30vw;
+}
+
+
+/* utility classes */
+
+.blend-multiply {
+  background-blend-mode: multiply;
+}
+
+.blend-burn {
+  background-blend-mode: color-burn;
+}
+
+.blend-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.blend-luminosity {
+  background-blend-mode: luminosity;
+}
+
+.blend-color {
+  background-blend-mode: color;
+}
+
+.blend-diff {
+  background-blend-mode: difference;
+}
+
