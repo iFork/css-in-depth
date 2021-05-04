@@ -207,6 +207,16 @@ button + button {
   background-repeat: no-repeat;
 }
 
+.bear-bg {
+  background-image: url('images/bear.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* padding: 5em 0 10em; */
+  position: relative;
+}
+
 .overlapping-stripes {
   background-image: 
     /* linear-gradient(lime, white), */
@@ -216,6 +226,35 @@ button + button {
   background-size: 40vw, 40vw, 40vw;
   background-repeat: no-repeat; /* NOTE: othervise only first bg will be visible */
   background-position: 0, 30vw, 60vw;
+}
+
+.emboss {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+
+  background-color: brown;
+  border-top: .1em solid #ccc;
+  border-bottom: .1em solid #ccc;
+
+  mix-blend-mode: overlay;
+
+  position: absolute;
+  bottom: .4em;
+  left: 0;
+  right: 0;
+}
+
+.emboss--alt-1 {
+  color: #808080;
+  background-color: #c33;
+
+  mix-blend-mode: hard-light;
+}
+
+.emboss > p {
+  margin: 0;
 }
 
 /* utility classes */
