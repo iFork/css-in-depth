@@ -19,3 +19,83 @@
   box-sizing: inherit;
 }
 
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.4;
+  background-color: var(--extra-light-gray);
+}
+
+.nav-container {
+  background-color: var(--medium-green);
+}
+.nav-container__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.home-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: Georgia, serif;
+}
+.top-nav {
+  list-style-type: none;
+  padding-left: 0;
+}
+.top-nav a {
+  display: inline-block;
+  background-color: var(--brand-green);
+  color: var(--white);
+  border-radius: .2em;
+  padding: .3em 1.25em;
+  text-decoration: none;
+}
+.top-nav__featured a {
+  background-color: var(--white);
+  color: var(--brand-green);
+}
+
+.hero {
+  background-image: url('collaboration.jpg');
+}
+.hero__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.button {
+  /* NOTE: Remember inline-block to override inline behavior of anchors */
+  display: inline-block; 
+  border: 2px solid var(--brand-green);
+  border-radius: .2em;
+  color: var(--brand-green);
+  padding: .4em 1em;
+  text-decoration: none;
+}
+.button--cta {
+  border: none;
+  color: var(--white);
+  background-color: var(--brand-green);
+}
+
+.tile-row {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.tile {
+  background-color: var(--white);
+}
+
+.page-footer {
+  background-color: var(--light-gray);
+  color: var(--gray);
+}
+
+.page-footer__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
