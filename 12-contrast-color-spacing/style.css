@@ -26,6 +26,23 @@ body {
   background-color: var(--extra-light-gray);
 }
 
+h1, h2, h3, h4 {
+  font-family: Georgia, serif;
+}
+
+a {
+  color: var(--medium-green);
+}
+a:visited {
+  color: var(--brand-green);
+}
+a:hover {
+  color: var(--brand-green);
+}
+a:active {
+  /* TODO: will add color for this */
+}
+
 .nav-container {
   background-color: var(--medium-green);
 }
@@ -43,6 +60,12 @@ body {
   text-decoration: none;
   color: var(--text-color);
   font-family: Georgia, serif;
+}
+/* NOTE: since e.g. a:visited has higher specificity than .home-link, */
+/* explicitly override base anchor styles. (just order is not enough here) */
+.home-link:visited,
+.home-link:hover {
+  color: var(--text-color);
 }
 
 .top-nav {
