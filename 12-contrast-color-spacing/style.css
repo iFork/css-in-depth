@@ -30,8 +30,11 @@ body {
   background-color: var(--medium-green);
 }
 .nav-container__inner {
+  display: flex;
+  justify-content: space-between;
   max-width: 1080px;
   margin: 0 auto;
+  padding: .5em 1em;
 }
 
 .home-link {
@@ -41,9 +44,12 @@ body {
   color: var(--text-color);
   font-family: Georgia, serif;
 }
+
 .top-nav {
+  display: flex;
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 .top-nav a {
   display: inline-block;
@@ -53,7 +59,11 @@ body {
   padding: .3em 1.25em;
   text-decoration: none;
 }
-.top-nav__featured a {
+.top-nav > li + li {
+  margin-left: .5em;
+}
+
+.top-nav__featured > a {
   background-color: var(--white);
   color: var(--brand-green);
 }
