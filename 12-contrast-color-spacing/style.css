@@ -100,10 +100,18 @@ a:active {
 
 .hero {
   background-image: url('collaboration.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 2.5rem;
 }
 .hero__inner {
   max-width: 1080px;
   margin: 0 auto;
+  padding: 50px 1em 200px;
+  text-align: right;
+}
+.hero__inner h2 {
+  font-size: 1.95rem;
 }
 
 .button {
