@@ -33,6 +33,11 @@ h1, h2, h3, h4 {
   font-family: Georgia, serif;
 }
 
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 a {
   color: var(--medium-green);
 }
@@ -164,8 +169,19 @@ a:active {
   border-radius: .3em;
   padding: 1.5625em;
 }
-.tile + .tile {
-  margin-left: 1em;
+
+.tile > h4 {
+  margin-top: 0;
+  /* Calc:
+  /* in mockup: 30px */
+  /* font-size 16px x 1.4 line-height = 22.4 */
+  /* 22.4-16  / 2 = 3.2px leading on each side, of both <h4> and <p> */
+  /* 30 - 2 x 3.2px =~ 24px = 1.5em */
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+}
+.tile .button {
+  margin-top: 1.5625em;
 }
 
 .tag-list {
