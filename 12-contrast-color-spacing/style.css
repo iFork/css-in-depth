@@ -157,6 +157,17 @@ a:active {
   margin-left: 1em;
 }
 
+.tag-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.tag-list > li {
+  display: inline-block;
+  background-color: var(--gray-95);
+  border-radius: .2em;
+  padding: .2em .5em;
+}
+
 .page-footer {
   margin-top: 3em;
   background-color: var(--gray-95);
