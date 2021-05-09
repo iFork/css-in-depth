@@ -133,13 +133,25 @@ a:active {
   background-color: var(--brand-green);
 }
 
-.tile-row {
+.container {
   max-width: 1080px;
   margin: 0 auto;
 }
 
+.tile-row {
+  display: flex;
+  padding: 0 1em;
+}
+.tile-row > * {
+  flex: 1; /* make each column equal width */
+}
+
 .tile {
   background-color: var(--white);
+  border-radius: .3em;
+}
+.tile + .tile {
+  margin-left: 1em;
 }
 
 .page-footer {
