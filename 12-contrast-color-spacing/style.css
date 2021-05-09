@@ -189,10 +189,11 @@ a:active {
   padding-left: 0;
 }
 .tag-list > li {
-  display: inline-block;
+  display: inline;
   background-color: var(--gray-95);
   border-radius: .2em;
-  padding: .2em .5em;
+  padding: .3em .5em;
+  line-height: 2.6;
 }
 
 .page-footer {
