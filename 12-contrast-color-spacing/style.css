@@ -54,7 +54,7 @@ a:active {
   justify-content: space-between;
   max-width: 1080px;
   margin: 0 auto;
-  padding: .5em 1em;
+  padding: .625em 1em;
 }
 
 .home-link {
@@ -74,7 +74,6 @@ a:active {
 .top-nav {
   display: flex;
   list-style-type: none;
-  padding-left: 0;
   margin: 0;
 }
 .top-nav a {
@@ -89,7 +88,7 @@ a:active {
   background-color: var(--dark-green);
 }
 .top-nav > li + li {
-  margin-left: .5em;
+  margin-left: .625em;
 }
 
 .top-nav__featured > a {
@@ -110,11 +109,19 @@ a:active {
 .hero__inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 50px 1em 200px;
+  /* Calc: top padding
+   * 1.95em of h2 x 16 = 31.2px font size
+   * line-height = 1.4 x 31.2px = 43.68px */
+  /* (43.68 - 31.2 )/2 = 6.24px leading at top and bottom */
+  /* 95px in mockup - 6.2px from 'leading' = 89px = 5.5625em */
+  padding: 5.5625em 12.5em 12.5em 0;
   text-align: right;
 }
 .hero__inner h2 {
   font-size: 1.95rem;
+  margin-top: 0;
+  /* 16px from mockup - 6.24px from bottom leading of above h2 =~ 10px = .625em */
+  margin-bottom: .625rem;
 }
 
 .button {
