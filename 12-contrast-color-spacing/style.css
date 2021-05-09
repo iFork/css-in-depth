@@ -155,11 +155,15 @@ a:active {
 }
 
 .page-footer {
+  margin-top: 3em;
   background-color: var(--light-gray);
   color: var(--gray);
+  padding: 1em 0;
 }
 
 .page-footer__inner {
   max-width: 1080px;
   margin: 0 auto;
+  text-align: center;
+  font-size: .8rem;
 }
