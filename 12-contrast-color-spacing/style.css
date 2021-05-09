@@ -155,10 +155,14 @@ a:active {
 .tile-row > * {
   flex: 1; /* make each column equal width */
 }
+.tile-row > * + * {
+  margin-left: 1.5625em;
+}
 
 .tile {
   background-color: var(--white);
   border-radius: .3em;
+  padding: 1.5625em;
 }
 .tile + .tile {
   margin-left: 1em;
