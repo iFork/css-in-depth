@@ -144,6 +144,7 @@ a:active {
   color: var(--brand-green);
   padding: .4em 1em;
   text-decoration: none;
+  font-size: .8rem;
 }
 .button:hover {
   color: var(--white);
