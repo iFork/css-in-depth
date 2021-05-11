@@ -126,6 +126,7 @@ a:active {
 }
 .hero__inner h2 {
   font-size: 1.95rem;
+  letter-spacing: -.02em;
   margin-top: 0;
   /* 16px from mockup - 6.24px from bottom leading of above h2 =~ 10px = .625em */
   margin-bottom: .625rem;
