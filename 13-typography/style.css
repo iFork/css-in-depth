@@ -1,0 +1,211 @@
+:root {
+  /* colors */
+  --brand-green:      hsl(162, 87%, 21%);
+  --dark-green:       hsl(162, 88%, 30%);
+  --medium-green:     hsl(162, 73%, 46%);
+
+  /* complement of green, reduce saturation to not steal the show */
+  --red:              hsl(342, 63%, 46%);
+
+  --text-color:       hsl(210, 11%, 15%);
+  --gray-60:             hsl(210, 7%, 56%);
+  --gray-95:       hsl(210, 17%, 95%);
+  --gray-98: hsl(210, 17%, 98%);
+  --white:            #ffffff;
+
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.4;
+  background-color: var(--gray-98);
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, serif;
+}
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: var(--medium-green);
+}
+a:visited {
+  color: var(--brand-green);
+}
+a:hover {
+  color: var(--brand-green);
+}
+a:active {
+  color: var(--red);
+}
+
+.nav-container {
+  background-color: var(--medium-green);
+}
+.nav-container__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: .625em 1em;
+}
+
+.home-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: Georgia, serif;
+}
+/* NOTE: since e.g. a:visited has higher specificity than .home-link, */
+/* explicitly override base anchor styles. (just order is not enough here) */
+.home-link:visited,
+.home-link:hover {
+  color: var(--text-color);
+}
+
+.top-nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+.top-nav a {
+  display: inline-block;
+  background-color: var(--brand-green);
+  color: var(--white);
+  border-radius: .2em;
+  padding: .3em 1.25em;
+  text-decoration: none;
+}
+.top-nav a:hover {
+  background-color: var(--dark-green);
+}
+.top-nav > li + li {
+  margin-left: .625em;
+}
+
+.top-nav__featured > a {
+  background-color: var(--white);
+  color: var(--brand-green);
+}
+.top-nav__featured > a:hover {
+  background-color: var(--white);
+  color: var(--medium-green);
+}
+
+.hero {
+  background-image: url('collaboration.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 2.5rem;
+}
+.hero__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  /* Calc: top padding
+   * 1.95em of h2 x 16 = 31.2px font size
+   * line-height = 1.4 x 31.2px = 43.68px */
+  /* (43.68 - 31.2 )/2 = 6.24px leading at top and bottom */
+  /* 95px in mockup - 6.2px from 'leading' = 89px = 5.5625em */
+  padding: 5.5625em 12.5em 12.5em 0;
+  text-align: right;
+}
+.hero__inner h2 {
+  font-size: 1.95rem;
+  margin-top: 0;
+  /* 16px from mockup - 6.24px from bottom leading of above h2 =~ 10px = .625em */
+  margin-bottom: .625rem;
+}
+
+.button {
+  /* NOTE: Remember inline-block to override inline behavior of anchors */
+  display: inline-block; 
+  border: 2px solid var(--brand-green);
+  border-radius: .2em;
+  color: var(--brand-green);
+  padding: .4em 1em;
+  text-decoration: none;
+}
+.button:hover {
+  color: var(--white);
+  background-color: var(--dark-green);
+}
+.button--cta {
+  border: none;
+  color: var(--white);
+  background-color: var(--brand-green);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.tile-row {
+  display: flex;
+  padding: 0 1em;
+}
+.tile-row > * {
+  flex: 1; /* make each column equal width */
+}
+.tile-row > * + * {
+  margin-left: 1.5625em;
+}
+
+.tile {
+  background-color: var(--white);
+  border-radius: .3em;
+  padding: 1.5625em;
+}
+
+.tile > h4 {
+  margin-top: 0;
+  /* Calc:
+  /* in mockup: 30px */
+  /* font-size 16px x 1.4 line-height = 22.4 */
+  /* 22.4-16  / 2 = 3.2px leading on each side, of both <h4> and <p> */
+  /* 30 - 2 x 3.2px =~ 24px = 1.5em */
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+}
+.tile .button {
+  margin-top: 1.5625em;
+}
+
+.tag-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.tag-list > li {
+  display: inline;
+  background-color: var(--gray-95);
+  border-radius: .2em;
+  padding: .3em .5em;
+  line-height: 2.6;
+}
+
+.page-footer {
+  margin-top: 3em;
+  background-color: var(--gray-95);
+  color: var(--gray-60);
+  padding: 1em 0;
+}
+
+.page-footer__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: .8rem;
+}
