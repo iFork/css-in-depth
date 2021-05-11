@@ -58,6 +58,7 @@ a:active {
 }
 .nav-container__inner {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
   max-width: 1080px;
   margin: 0 auto;
