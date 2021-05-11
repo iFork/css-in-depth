@@ -23,14 +23,14 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   margin: 0;
   line-height: 1.4;
   background-color: var(--gray-98);
 }
 
 h1, h2, h3, h4 {
-  font-family: Georgia, serif;
+  font-family: Sansita, serif;
 }
 
 p {
@@ -67,7 +67,7 @@ a:active {
   font-weight: bold;
   text-decoration: none;
   color: var(--text-color);
-  font-family: Georgia, serif;
+  font-family: Sansita, serif;
 }
 /* NOTE: since e.g. a:visited has higher specificity than .home-link, */
 /* explicitly override base anchor styles. (just order is not enough here) */
