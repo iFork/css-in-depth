@@ -29,10 +29,19 @@ body {
   letter-spacing: .01em;
   background-color: var(--gray-98);
 }
+.wfonts-inactive body {
+  font-family: Helvetica, Arial, sans-serif;
+}
 
 h1, h2, h3, h4 {
   font-family: Sansita, serif;
   letter-spacing: .03em;
+}
+.wfonts-inactive h1, 
+.wfonts-inactive h2, 
+.wfonts-inactive h3, 
+.wfonts-inactive h4 {
+  font-family: Georgia, serif;
 }
 
 p {
@@ -71,6 +80,11 @@ a:active {
   text-decoration: none;
   color: var(--text-color);
   font-family: Sansita, serif;
+}
+/* failover font acting as immidiate swap before web font loading.  */
+/* No any FOIT, only FOUT with this failover font. */
+.wfonts-inactive .home-link {
+  font-family: Georgia, serif;
 }
 /* NOTE: since e.g. a:visited has higher specificity than .home-link, */
 /* explicitly override base anchor styles. (just order is not enough here) */
