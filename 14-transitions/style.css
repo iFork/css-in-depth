@@ -58,3 +58,6 @@ body {
 .ease-in-out {
   transition: all 1s ease-in-out;
 }
+.steps {
+  transition: all 1s steps(4, start); /* end is default */
+}
