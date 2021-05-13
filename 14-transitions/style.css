@@ -17,6 +17,8 @@ body {
   border: 0;
   padding: .4em 1em;
   font-size: 1rem;
+  transition-property: all;
+  transition-duration: .5s;
 }
 .button:hover {
   background-color: hsl(0, 50%, 50%);
