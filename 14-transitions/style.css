@@ -78,13 +78,17 @@ body {
   background-color: hsl(280, 15%, 95%);
 }
 .dropdown__drawer {
-  display: none;
+  visibility: hidden;
   position: absolute;
   z-index: 100;
   min-width: 100%;
+  opacity: 0;
+  transition: all .3s ease-out;
 }
 .dropdown.is-open .dropdown__drawer {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .menu {
   list-style-type: none;
