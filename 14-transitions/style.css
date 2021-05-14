@@ -73,7 +73,9 @@ body {
   color: hsl(280, 30%, 60%);
   background-color: white;
 }
-
+.dropdown__toggle:hover {
+  background-color: hsl(280, 15%, 95%);
+}
 .dropdown__drawer {
   display: none;
   position: absolute;
@@ -99,4 +101,8 @@ body {
   color: hsl(280, 40%, 60%);
   /* make not transparent */
   background-color: white; 
+}
+.menu > li > a:hover {
+  background-color: hsl(280, 15%, 95%);
+  color: hsl(280, 25%, 10%)
 }
