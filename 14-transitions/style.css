@@ -80,6 +80,7 @@ body {
 .dropdown__drawer {
   display: none;
   position: absolute;
+  z-index: 100;
   min-width: 100%;
 }
 .dropdown.is-open .dropdown__drawer {
