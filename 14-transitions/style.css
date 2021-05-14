@@ -83,14 +83,19 @@ body {
   z-index: 100;
   min-width: 100%;
   opacity: 0;
-  transition: all .3s ease-out;
+  height: 0;
+  /* NOTE: default overflow is visible canceling the effect of 0 height */
+  overflow: hidden; 
   transition: opacity .3s ease-out,
+              height .3s ease-out,
               visibility 0s linear .3s; /* delay visibility hiding for fede-out */
 }
 .dropdown.is-open .dropdown__drawer {
   display: block;
   opacity: 1;
   visibility: visible;
+  /* NOTE: height: auto is not a valid endpoint for height transition,
+   * set it to a calculated number with JS */
   transition-delay: 0s; /* override delay for visibility:visible for fade-in */
 }
 .menu {
