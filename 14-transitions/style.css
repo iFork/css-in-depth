@@ -69,6 +69,12 @@ body {
   background-color: white;
 }
 
+.dropdown__drawer {
+  display: none;
+}
+.dropdown.is-open .dropdown__drawer {
+  display: block;
+}
 .menu {
   display: inline-block; /* default for <ul> was block, sync width w/ content */
   list-style-type: none;
