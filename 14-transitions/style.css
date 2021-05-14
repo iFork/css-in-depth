@@ -61,3 +61,28 @@ body {
 .steps {
   transition: all 1s steps(4, start); /* end is default */
 }
+
+.dropdown__toggle {
+  border: 1px solid hsl(280, 10%, 80%);
+  padding: .5em 1em;
+  color: hsl(280, 30%, 60%);
+  background-color: white;
+}
+
+.menu {
+  display: inline-block; /* default for <ul> was block, sync width w/ content */
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  /* Alternatively, move all border-ing to <a>, then remove top borders w/ owl */
+  border: 1px solid hsl(280, 10%, 80%);
+}
+.menu > li + li {
+  border-top: 1px solid hsl(280, 10%, 80%);
+}
+.menu > li > a {
+  display: block;
+  padding: .5em 2em .5em 1em;
+  text-decoration: none;
+  color: hsl(280, 40%, 60%);
+}
