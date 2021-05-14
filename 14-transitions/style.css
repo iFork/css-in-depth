@@ -84,11 +84,14 @@ body {
   min-width: 100%;
   opacity: 0;
   transition: all .3s ease-out;
+  transition: opacity .3s ease-out,
+              visibility 0s linear .3s; /* delay visibility hiding for fede-out */
 }
 .dropdown.is-open .dropdown__drawer {
   display: block;
   opacity: 1;
   visibility: visible;
+  transition-delay: 0s; /* override delay for visibility:visible for fade-in */
 }
 .menu {
   list-style-type: none;
