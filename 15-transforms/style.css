@@ -1,0 +1,37 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: hsl(210, 80%, 20%);
+}
+
+.row {
+  display: flex;
+  margin: 3em;
+}
+
+.card {
+  background-color: white;
+  max-width: 300px;
+  padding: .4em;
+}
+.card > img {
+  width: 100%;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(30, 80%, 40%);
+  /* box-shadow: 2px 3px 5px hsl(90, 30%, 70%); */
+  box-shadow: 0 0 .7em .2em hsla(90, 30%, 80%, .5);
+  margin: 1em;
+}
+
