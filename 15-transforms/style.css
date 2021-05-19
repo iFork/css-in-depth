@@ -8,9 +8,21 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Raleway, Arial, sans-serif;
+  line-height: 1.4;
+  margin: 0;
   background-color: hsl(210, 80%, 20%);
+  background-image: radial-gradient(
+    hsl(210, 80%, 30%), hsl(210, 80%, 20%));
+  min-height: 100vh;
 }
+
+h1, h2, h3 {
+  font-family: 'Alfa Slab One', serif;
+}
+
+
+/* Objects */
 
 .row {
   display: flex;
@@ -35,6 +47,14 @@ body {
   /* box-shadow: 2px 3px 5px hsl(90, 30%, 70%); */
   box-shadow: 0 0 .7em .2em hsla(90, 30%, 80%, .5);
   margin: 1em;
+}
+
+/* Components */
+
+.page-header {
+  color: white;
+  margin: 0;
+  padding: 1rem;
 }
 
 /* Utility classes */
