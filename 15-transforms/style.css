@@ -11,6 +11,7 @@ body {
   font-family: Raleway, Arial, sans-serif;
   line-height: 1.4;
   margin: 0;
+  color: white;
   background-color: hsl(210, 80%, 20%);
   background-image: radial-gradient(
     hsl(210, 80%, 30%), hsl(210, 80%, 20%));
@@ -32,6 +33,7 @@ h1, h2, h3 {
 
 .card {
   background-color: white;
+  color: black;
   max-width: 300px;
   padding: .4em;
   margin-left: 1em;
@@ -44,7 +46,6 @@ h1, h2, h3 {
   width: 50px;
   height: 50px;
   background-color: hsl(30, 80%, 40%);
-  /* box-shadow: 2px 3px 5px hsl(90, 30%, 70%); */
   box-shadow: 0 0 .7em .2em hsla(90, 30%, 80%, .5);
   margin: 1em;
 }
@@ -52,9 +53,17 @@ h1, h2, h3 {
 /* Components */
 
 .page-header {
-  color: white;
   margin: 0;
   padding: 1rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Utility classes */
