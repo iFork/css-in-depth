@@ -82,6 +82,17 @@ h1, h2, h3 {
   color: hsl(40, 100%, 70%);
 }
 
+.nav-links__icon {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: -.2em; /* move down to center w/ text */
+}
+.nav-links__label {
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: .8rem;
+}
+
 
 /* Utility classes */
 
