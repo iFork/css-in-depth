@@ -15,6 +15,7 @@ body {
 .row {
   display: flex;
   margin: 3em;
+  border: 2px solid hsl(210, 10%, 90%);
 }
 
 .card {
@@ -38,6 +39,21 @@ body {
 
 /* Utility classes */
 
+.blur {
+  position: relative;
+  filter: blur(4px);
+}
+.blur::after {
+  position: absolute;
+  content:  "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(210, 80%, 20%, .2);
+}
+
 .rotate {
   transform: rotate(15deg);
 }
@@ -60,4 +76,12 @@ body {
 }
 .skew--left-center {
   transform-origin: left center;
+}
+
+/* order of chained transforms - from right to left */
+.topple--rotate-shift {
+  transform: translate(1em, 0) rotate(45deg);
+}
+.topple--shift-rotate {
+  transform: rotate(45deg) translate(1em, 0);
 }
