@@ -21,6 +21,7 @@ body {
   background-color: white;
   max-width: 300px;
   padding: .4em;
+  margin-left: 1em;
 }
 .card > img {
   width: 100%;
@@ -35,3 +36,28 @@ body {
   margin: 1em;
 }
 
+/* Utility classes */
+
+.rotate {
+  transform: rotate(15deg);
+}
+.rotate--corner {
+  transform-origin: bottom right;
+}
+
+.scale-down {
+  transform: scale(.8);
+}
+.scale-down--corner {
+  transform-origin: top right;
+}
+
+.skew {
+  transform: skew(15deg);
+}
+.skew--left {
+  transform-origin: top left;
+}
+.skew--left-center {
+  transform-origin: left center;
+}
