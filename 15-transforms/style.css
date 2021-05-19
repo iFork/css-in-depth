@@ -57,14 +57,31 @@ h1, h2, h3 {
   padding: 1rem;
 }
 
+.main-nav {
+  padding: 0 1rem;
+}
+
 .nav-links {
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.nav-links li + li {
+  margin-left: .8em;
 }
 .nav-links a {
+  display: block;
+  padding: .8em 0;
   color: white;
   text-decoration: none;
 }
+.nav-links a:hover {
+  color: hsl(40, 100%, 70%);
+}
+
 
 /* Utility classes */
 
