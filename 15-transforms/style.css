@@ -18,6 +18,10 @@ body {
   min-height: 100vh;
 }
 
+main {
+  margin: 0 10em;
+}
+
 h1, h2, h3 {
   font-family: 'Alfa Slab One', serif;
 }
@@ -66,6 +70,17 @@ h1, h2, h3 {
 .main-nav {
   padding: 0 1rem;
 }
+@media (min-width: 30em) { /* 480px */
+  .main-nav {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    padding: 1em;
+    background-color: hsl(210, 80%, 10%);
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+  }
+}
 
 .nav-links {
   display: flex;
@@ -87,6 +102,15 @@ h1, h2, h3 {
 .nav-links a:hover {
   color: hsl(40, 100%, 70%);
 }
+@media (min-width: 30em) {
+  .nav-links {
+    display: block;
+    margin-bottom: 0;
+  }
+  .nav-links li + li {
+    margin-left: 0;
+  }
+}
 
 .nav-links__icon {
   width: 1.5em;
@@ -97,6 +121,11 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: .06em;
   font-size: .8rem;
+}
+@media (min-width: 30em) {
+  .nav-links__label {
+    margin-left: 1em;
+  }
 }
 
 
