@@ -251,3 +251,9 @@ h1, h2, h3 {
   transform: rotateY(-30deg);
 }
 
+.pull-closer {
+  transform: translateZ(50px);
+}
+.push-further {
+  transform: translateZ(-100px);
+}
