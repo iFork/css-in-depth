@@ -233,6 +233,14 @@ h1, h2, h3 {
   transform:  perspective(70px) rotateY(-30deg);
 }
 
+.flip {
+  transform: rotateY(180deg);
+}
+.flip--back-visible {
+  backface-visibility: visible;
+}
+
+
 .share-perspective {
   perspective: 200px;
 }
