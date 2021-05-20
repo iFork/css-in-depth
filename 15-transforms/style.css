@@ -232,3 +232,22 @@ h1, h2, h3 {
 .yaw-right {
   transform:  perspective(70px) rotateY(-30deg);
 }
+
+.share-perspective {
+  perspective: 200px;
+}
+
+.pitch-back-no-own-perspective {
+  transform: rotateX(30deg); 
+}
+.pitch-forward-no-own-perspective {
+  transform: rotateX(-30deg);
+}
+
+.yaw-left-no-own-perspective {
+  transform: rotateY(30deg);
+}
+.yaw-right-no-own-perspective {
+  transform: rotateY(-30deg);
+}
+
