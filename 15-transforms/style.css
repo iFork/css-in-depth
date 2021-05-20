@@ -236,6 +236,10 @@ h1, h2, h3 {
 .share-perspective {
   perspective: 200px;
 }
+.share-perspective--from-bottom-corner {
+  /* perspective-origin: left bottom ; */
+  perspective-origin: -10% 200% ;
+}
 
 .pitch-back-no-own-perspective {
   transform: rotateX(30deg); 
@@ -264,3 +268,4 @@ h1, h2, h3 {
 .transition-transfer:hover {
   transform: translate(0,0) rotate(0deg); 
 }
+
