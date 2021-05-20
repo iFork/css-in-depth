@@ -135,10 +135,13 @@ h1, h2, h3 {
     display: inline-block; /* NOTE: to be able to subject to transforms */
     margin-left: 1em;
     transform: translate(-1em);
-    transition: transform .3s ease-out;
+    opacity: 0;
+    transition: transform .4s ease-out,
+                opacity .4s linear;
   }
   .nav-links:hover .nav-links__label {
     transform: translate(0);
+    opacity: 1;
   }
 }
 
