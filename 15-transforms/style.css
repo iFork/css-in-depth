@@ -139,7 +139,8 @@ h1, h2, h3 {
     transition: transform .4s ease-out,
                 opacity .4s linear;
   }
-  .nav-links:hover .nav-links__label {
+  .nav-links:hover .nav-links__label,
+  .nav-links a:focus .nav-links__label {
     transform: translate(0);
     opacity: 1;
   }
