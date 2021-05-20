@@ -213,3 +213,22 @@ h1, h2, h3 {
 .topple--shift-rotate {
   transform: rotate(45deg) translate(1em, 0);
 }
+
+/* 3D transforms */
+.pitch-back {
+  /* transform: rotateX(30deg) perspective(100px); */
+  /* NOTE: When perspective is applied directly to the element (as a function,
+   * not as a property for its children) apply perspective after rotating
+   * (i.e. put lefter) */
+  transform: perspective(100px) rotateX(30deg); 
+}
+.pitch-forward {
+  transform: perspective(100px) rotateX(-30deg);
+}
+
+.yaw-left {
+  transform:  perspective(70px) rotateY(30deg);
+}
+.yaw-right {
+  transform:  perspective(70px) rotateY(-30deg);
+}
