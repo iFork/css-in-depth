@@ -257,3 +257,10 @@ h1, h2, h3 {
 .push-further {
   transform: translateZ(-100px);
 }
+
+.transition-transfer {
+  transition: transform .2s linear;
+}
+.transition-transfer:hover {
+  transform: translate(0,0) rotate(0deg); 
+}
