@@ -165,6 +165,26 @@ h1, h2, h3 {
 }
 
 
+.card-two-sided {
+  transition: transform .3s ease-out;
+}
+.card-two-sided:hover {
+  transform: rotateY(180deg);
+}
+.card-two-sided__face {
+  background-color: white;
+  color: black;
+  max-width: 300px;
+  padding: .4em;
+}
+.card-two-sided__face > img {
+  width: 100%;
+}
+
+.card-two-sided__face--back {
+  transform: rotateY(180deg);
+}
+
 /* Utility classes */
 
 .blur {
