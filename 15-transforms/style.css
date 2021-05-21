@@ -166,6 +166,8 @@ h1, h2, h3 {
 
 .scene {
   perspective: 700px;
+  width: 300px;
+  min-height: 300px;
 }
 
 .card-two-sided {
@@ -173,9 +175,8 @@ h1, h2, h3 {
   transition: transform .4s ease-out .1s;
   /* Children to maintain their position in 3D space */
   transform-style: preserve-3d;
-  width: 300px;
 }
-.card-two-sided:hover {
+.scene:hover .card-two-sided {
   transform: rotateY(180deg);
 }
 .card-two-sided__face {
