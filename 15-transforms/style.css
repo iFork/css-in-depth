@@ -164,11 +164,13 @@ h1, h2, h3 {
   }
 }
 
+.scene {
+  perspective: 700px;
+}
 
 .card-two-sided {
   position: relative;
   transition: transform .4s ease-out .1s;
-  perspective: 300px;
   /* Children to maintain their position in 3D space */
   transform-style: preserve-3d;
   width: 300px;
