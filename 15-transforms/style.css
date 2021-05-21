@@ -166,7 +166,10 @@ h1, h2, h3 {
 
 
 .card-two-sided {
-  transition: transform .3s ease-out;
+  transition: transform .3s ease-out .1s;
+  perspective: 300px;
+  /* Children to maintain their position in 3D space */
+  transform-style: preserve-3d;
 }
 .card-two-sided:hover {
   transform: rotateY(180deg);
@@ -176,6 +179,8 @@ h1, h2, h3 {
   color: black;
   max-width: 300px;
   padding: .4em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 .card-two-sided__face > img {
   width: 100%;
