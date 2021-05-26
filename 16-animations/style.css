@@ -310,3 +310,25 @@ h1, h2, h3 {
   transform: translate(0,0) rotate(0deg); 
 }
 
+.animate-contrived-over-and-back {
+  /* animation: contrived-over-and-back .3s linear 0s 3; */
+  animation-name: contrived-over-and-back;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+}
+
+@keyframes contrived-over-and-back {
+  0% {
+    background-color: hsl(0, 50%, 50%);
+    transform: translate(0);
+  }
+  50% {
+    background-color: hsl(0, 50%, 50%);
+    transform: translate(10px, 20px);
+  }
+  100% {
+    background-color: hsl(270, 50%, 90%);
+    transform: translate(0);
+  }
+}
