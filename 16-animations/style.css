@@ -1,0 +1,312 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Raleway, Arial, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  color: white;
+  background-color: hsl(210, 80%, 20%);
+  background-image: radial-gradient(
+    hsl(210, 80%, 30%), hsl(210, 80%, 20%));
+  min-height: 100vh;
+}
+
+main {
+  margin: 0 5em;
+}
+
+h1, h2, h3 {
+  font-family: 'Alfa Slab One', serif;
+}
+
+
+/* Objects */
+
+.row {
+  display: flex;
+  margin: 3em;
+  border: 2px solid hsl(210, 10%, 90%);
+}
+
+.card {
+  background-color: white;
+  color: black;
+  max-width: 300px;
+  padding: .4em;
+}
+.card + .card {
+  margin-top: 1em;
+
+}
+.card > img {
+  width: 100%;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(30, 80%, 40%);
+  box-shadow: 0 0 .7em .2em hsla(90, 30%, 80%, .5);
+  margin: 1em;
+}
+
+/* Components */
+
+.page-header {
+  margin: 0;
+  padding: 1rem;
+}
+@media (min-width: 30em) {
+  .page-header {
+    padding: 2rem 2rem 3rem;
+  }
+
+}
+
+.main-nav {
+  padding: 0 1rem;
+}
+@media (min-width: 30em) { /* 480px */
+  .main-nav {
+    position: fixed;
+    top: 8.25rem;
+    left: 0;
+    padding: 1em;
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+    transition: background-color .5s linear;
+  }
+  .main-nav:hover {
+    background-color: rgba(0, 0, 0, .6);
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.nav-links li + li {
+  margin-left: .8em;
+}
+.nav-links a {
+  display: block;
+  padding: .8em 0;
+  color: white;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: hsl(40, 100%, 70%);
+}
+@media (min-width: 30em) {
+  .nav-links {
+    display: block;
+    margin-bottom: 0;
+  }
+  .nav-links li + li {
+    margin-left: 0;
+  }
+}
+
+.nav-links__icon {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: -.2em; /* move down to center w/ text */
+}
+.nav-links__label {
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: .8rem;
+}
+@media (min-width: 30em) {
+  .nav-links__icon {
+    transition: transform .2s ease-out;
+  }
+  .nav-links a:hover .nav-links__icon,
+  .nav-links a:focus .nav-links__icon {
+    transform: scale(1.3);
+  }
+  .nav-links__label {
+    display: inline-block; /* NOTE: to be able to subject to transforms */
+    margin-left: 1em;
+    transform: translate(-1em);
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.2, 0.9, 0.3, 1.3), /* overshoot */
+                opacity .4s linear;
+  }
+  .nav-links:hover .nav-links__label,
+  .nav-links a:focus .nav-links__label {
+    transform: translate(0);
+    opacity: 1;
+  }
+  /* staggering transitions */
+  .nav-links li:nth-child(2) .nav-links__label {
+    transition-delay: .1s;
+  }
+  .nav-links li:nth-child(3) .nav-links__label {
+    transition-delay: .2s;
+  }
+  .nav-links li:nth-child(4) .nav-links__label {
+    transition-delay: .3s;
+  }
+  .nav-links li:nth-child(5) .nav-links__label {
+    transition-delay: .4s;
+  }
+  .nav-links li:nth-child(6) .nav-links__label {
+    transition-delay: .5s;
+  }
+}
+
+.scene {
+  perspective: 700px;
+  width: 300px;
+  min-height: 300px;
+}
+
+.card-two-sided {
+  position: relative;
+  transition: transform .4s ease-out .1s;
+  /* Children to maintain their position in 3D space */
+  transform-style: preserve-3d;
+}
+.scene:hover .card-two-sided {
+  transform: rotateY(180deg);
+}
+.card-two-sided__face {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: .4em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.card-two-sided__face > img {
+  width: 100%;
+}
+
+.card-two-sided__face--back {
+  transform: rotateY(180deg);
+}
+
+/* Utility classes */
+
+.blur {
+  position: relative;
+  filter: blur(4px);
+}
+.blur::after {
+  position: absolute;
+  content:  "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(210, 80%, 20%, .2);
+}
+
+.rotate {
+  transform: rotate(15deg);
+}
+.rotate--corner {
+  transform-origin: bottom right;
+}
+
+.scale-down {
+  transform: scale(.8);
+}
+.scale-down--corner {
+  transform-origin: top right;
+}
+
+.skew {
+  transform: skew(15deg);
+}
+.skew--left {
+  transform-origin: top left;
+}
+.skew--left-center {
+  transform-origin: left center;
+}
+
+/* order of chained transforms - from right to left */
+.topple--rotate-shift {
+  transform: translate(1em, 0) rotate(45deg);
+}
+.topple--shift-rotate {
+  transform: rotate(45deg) translate(1em, 0);
+}
+
+/* 3D transforms */
+.pitch-back {
+  /* transform: rotateX(30deg) perspective(100px); */
+  /* NOTE: When perspective is applied directly to the element (as a function,
+   * not as a property for its children) apply perspective after rotating
+   * (i.e. put lefter) */
+  transform: perspective(100px) rotateX(30deg); 
+}
+.pitch-forward {
+  transform: perspective(100px) rotateX(-30deg);
+}
+
+.yaw-left {
+  transform:  perspective(70px) rotateY(30deg);
+}
+.yaw-right {
+  transform:  perspective(70px) rotateY(-30deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+.flip--back-visible {
+  backface-visibility: visible;
+}
+
+
+.share-perspective {
+  perspective: 200px;
+}
+.share-perspective--from-bottom-corner {
+  /* perspective-origin: left bottom ; */
+  perspective-origin: -10% 200% ;
+}
+
+.pitch-back-no-own-perspective {
+  transform: rotateX(30deg); 
+}
+.pitch-forward-no-own-perspective {
+  transform: rotateX(-30deg);
+}
+
+.yaw-left-no-own-perspective {
+  transform: rotateY(30deg);
+}
+.yaw-right-no-own-perspective {
+  transform: rotateY(-30deg);
+}
+
+.pull-closer {
+  transform: translateZ(50px);
+}
+.push-further {
+  transform: translateZ(-100px);
+}
+
+.transition-transfer {
+  transition: transform .2s linear;
+}
+.transition-transfer:hover {
+  transform: translate(0,0) rotate(0deg); 
+}
+
