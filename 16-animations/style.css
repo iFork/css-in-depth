@@ -190,7 +190,7 @@ h1, h2, h3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2em;
-      perspective: 300px;
+      perspective: 500px;
     }
     .flyin-grid__item {
       margin: 0; /* override fallback margins */
@@ -372,12 +372,12 @@ h1, h2, h3 {
 @keyframes fly-in {
   0% {
     opacity: 0;
-    transform: translateZ(-500px) rotateY(90deg);
+    transform: translateZ(-800px) rotateY(90deg);
     backface-visibility: hidden;
   }
   60% {
     opacity: .5;
-    transform: translateZ(-200px) rotateY(70deg);
+    transform: translateZ(-160px) rotateY(70deg);
   }
   100% {
     opacity: 1;
