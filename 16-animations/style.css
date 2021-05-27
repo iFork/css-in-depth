@@ -42,9 +42,9 @@ h1, h2, h3 {
   padding: .4em;
   box-shadow: .2em .5em 1em rgba(0, 0, 0, .6);
 }
-/* .card + .card { */
-/*   margin-top: 1em; */
-/* } */
+.card + .card {
+  margin-top: 1em;
+}
 .card > img {
   width: 100%;
 }
@@ -180,6 +180,24 @@ h1, h2, h3 {
     margin: .5em;
     flex: 1 1 300px;
     max-width: 600px;
+  }
+  .flyin-grid__item + .flyin-grid__item {
+    margin-top: .5em; /* override card margin */
+  }
+
+  @supports (display: grid) {
+    .flyin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+    }
+    .flyin-grid__item {
+      margin: 0; /* override fallback margins */
+      max-width: initial; /* reset fallback (flexbox) declaration */
+    }
+    .flyin-grid__item + .flyin-grid__item {
+      margin-top: 0; /* override fallback margin */
+    }
   }
 }
 
