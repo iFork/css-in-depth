@@ -373,7 +373,7 @@ h1, h2, h3 {
   0% {
     opacity: 0;
     transform: translateZ(-800px) rotateY(90deg);
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; has no effect till 90deg */
   }
   60% {
     opacity: .5;
