@@ -196,6 +196,7 @@ h1, h2, h3 {
       margin: 0; /* override fallback margins */
       max-width: initial; /* reset fallback (flexbox) declaration */
       animation: fly-in .6s ease-in;
+      animation-fill-mode: backwards;
     }
     .flyin-grid__item + .flyin-grid__item {
       margin-top: 0; /* override fallback margin */
