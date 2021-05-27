@@ -195,7 +195,7 @@ h1, h2, h3 {
     .flyin-grid__item {
       margin: 0; /* override fallback margins */
       max-width: initial; /* reset fallback (flexbox) declaration */
-      animation: fly-in 1s linear;
+      animation: fly-in .6s ease-in;
     }
     .flyin-grid__item + .flyin-grid__item {
       margin-top: 0; /* override fallback margin */
@@ -375,12 +375,11 @@ h1, h2, h3 {
     transform: translateZ(-800px) rotateY(90deg);
     /* backface-visibility: hidden; has no effect till 90deg */
   }
-  60% {
-    opacity: .5;
+  56% {
+    opacity: 1;
     transform: translateZ(-160px) rotateY(70deg);
   }
   100% {
-    opacity: 1;
     transform: translateY(0) rotateY(0);
   }
 }
