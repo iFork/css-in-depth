@@ -40,11 +40,11 @@ h1, h2, h3 {
   color: black;
   max-width: 300px;
   padding: .4em;
+  box-shadow: .2em .5em 1em rgba(0, 0, 0, .6);
 }
-.card + .card {
-  margin-top: 1em;
-
-}
+/* .card + .card { */
+/*   margin-top: 1em; */
+/* } */
 .card > img {
   width: 100%;
 }
@@ -164,6 +164,22 @@ h1, h2, h3 {
   }
   .nav-links li:nth-child(6) .nav-links__label {
     transition-delay: .5s;
+  }
+}
+
+.flyin-grid {
+  margin: 0 1rem;
+}
+@media (min-width: 30em) {
+  .flyin-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5rem; /* increase padding accounting for fixed menu */
+  }
+  .flyin-grid__item {
+    margin: .5em;
+    flex: 1 1 300px;
+    max-width: 600px;
   }
 }
 
