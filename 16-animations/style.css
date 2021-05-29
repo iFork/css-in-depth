@@ -99,6 +99,24 @@ h1, h2, h3 {
   background-color: hsl(210, 45%, 40%);
 }
 
+.button.is-loading {
+  color: transparent;
+  position: relative; 
+}
+.button.is-loading::before {
+  content: "";
+  border-top: 2px solid white;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  position: absolute;
+  /* center spinner. 
+   * Can do the same w/ negative margins */
+  top: calc(50% - .7em); /* NOTE: remember space around `-` minus sign */
+  left: calc(50% - .7em);
+  animation: spin .6s linear infinite;
+}
+
 /* Components */
 
 .page-header {
@@ -441,3 +459,13 @@ h1, h2, h3 {
     transform: translateY(0) rotateY(0);
   }
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
