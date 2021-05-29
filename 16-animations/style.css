@@ -57,6 +57,47 @@ h1, h2, h3 {
   margin: 1em;
 }
 
+.form {
+  background-color: white;
+  color: black;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 1em;
+  margin: 0 auto;
+  border-radius: .2em;
+  box-shadow: .2em .3em 5px rgba(0, 0, 0, .6);
+}
+
+.form__block + .form__block {
+  margin-top: 1em;
+}
+.form__block > * {
+  display: block;
+}
+
+.form__block > * + * {
+  margin-top: .5em;
+}
+
+.form__block textarea {
+  width: 100%;
+  min-width: 300px;
+  max-width: 100%;
+  min-height: 3em;
+}
+
+
+.button {
+  background-color: hsl(210, 50%, 50%);
+  color: white;
+  padding: .5em 1em;
+  border: none;
+  transition: background-color .3s linear;
+}
+.button:hover {
+  background-color: hsl(210, 45%, 40%);
+}
+
 /* Components */
 
 .page-header {
