@@ -478,15 +478,11 @@ h1, h2, h3 {
 }
 
 @keyframes shake {
-  0% {
-    transform: translate(4px);
-  }
-  25% {
-    transform: translate(-4px);
-  }
+  0%,
   50% {
     transform: translate(4px);
   }
+  25%,
   75% {
     transform: translate(-4px);
   }
