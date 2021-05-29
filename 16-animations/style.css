@@ -433,6 +433,11 @@ h1, h2, h3 {
   animation-iteration-count: 3;
 }
 
+.shake {
+  animation: shake .5s linear;
+}
+
+
 @keyframes contrived-over-and-back {
   0% {
     background-color: hsl(0, 50%, 50%);
@@ -469,6 +474,24 @@ h1, h2, h3 {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(4px);
+  }
+  25% {
+    transform: translate(-4px);
+  }
+  50% {
+    transform: translate(4px);
+  }
+  75% {
+    transform: translate(-4px);
+  }
+  100% {
+    transform: translate(0);
   }
 }
 
