@@ -84,6 +84,7 @@ h1, h2, h3 {
   min-width: 300px;
   max-width: 100%;
   min-height: 3em;
+  font: inherit;
 }
 
 
