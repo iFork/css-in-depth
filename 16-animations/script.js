@@ -27,19 +27,26 @@
   function registerSaveReminder (form) {
     const inputs = form.querySelectorAll('textarea, input');
     const btn = form.querySelector('.button--submit');
-    Array.prototype.forEach.call(inputs, respondToEvents);
+    Array.prototype.forEach.call(inputs, listenToKeyup);
+
+    listenToBtnEvents();
 
     let timeoutID = null;
-    function respondToEvents (input) {
+
+    function listenToKeyup (input) {
       input.addEventListener('keyup', function () {
         clearTimeout(timeoutID);
         timeoutID = setTimeout(function () {
           btn.classList.add('shake');
         }, 5000);
       })
+    }
+
+    function listenToBtnEvents() {
       btn.addEventListener('animationend', function () {
         btn.classList.remove('shake');
-      })
+      });
     }
+
   }
 })();
