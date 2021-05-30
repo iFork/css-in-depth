@@ -27,12 +27,12 @@
   function registerSaveReminder (form) {
     const inputs = form.querySelectorAll('textarea, input');
     const btn = form.querySelector('.button--submit');
-    Array.prototype.forEach.call(inputs, listenToKeyup);
+    Array.prototype.forEach.call(inputs, listenToInputEvents);
     listenToBtnEvents();
 
     let timeoutID = null;
 
-    function listenToKeyup (input) {
+    function listenToInputEvents (input) {
       input.addEventListener('keyup', function () {
         clearTimeout(timeoutID);
         timeoutID = setTimeout(function () {
@@ -41,6 +41,7 @@
       })
     }
 
+    // TODO:IDEA integrate w/ registerFormsLoadingState
     function listenToBtnEvents() {
       btn.addEventListener('animationend', function () {
         btn.classList.remove('shake');
