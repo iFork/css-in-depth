@@ -28,7 +28,6 @@
     const inputs = form.querySelectorAll('textarea, input');
     const btn = form.querySelector('.button--submit');
     Array.prototype.forEach.call(inputs, listenToKeyup);
-
     listenToBtnEvents();
 
     let timeoutID = null;
@@ -46,6 +45,9 @@
       btn.addEventListener('animationend', function () {
         btn.classList.remove('shake');
       });
+      btn.addEventListener('click', function () {
+        clearTimeout(timeoutID);
+      })
     }
 
   }
